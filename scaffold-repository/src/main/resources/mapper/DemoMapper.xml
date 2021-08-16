@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.ninini.scaffold.repository.mapper.DemoMapper">
+    <!--    <resultMap id="systemUserMap" type="com.husy.domain.SystemUser" >-->
+    <!--        <id column="user_id" property="userId" />-->
+    <!--        <result column="user_account" property="userAccount" />-->
+    <!--        <result column="user_password" property="userPassword" />-->
+    <!--        <result column="user_phone" property="userPhone" />-->
+    <!--    </resultMap>-->
+
+    <select id="getDemoPOs" resultType="net.ninini.scaffold.repository.po.DemoPO">
+        SELECT *
+        FROM t_trace
+    </select>
+
+</mapper>

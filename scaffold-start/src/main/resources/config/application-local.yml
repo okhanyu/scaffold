@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: scaffold
+  profiles:
+    include: local-queue,local-cache,local-log,local-http,local-db,local-metrics,local-id,local-jwt
+
+server:
+  port: 8080
+#app:
+#  id: springboot-apollo
+#apollo:
+#  meta: http://127.0.0.1:8080
+#  bootstrap:
+#    enabled: true
+#    eagerLoad:
+#      enabled: true
+

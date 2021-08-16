@@ -1,0 +1,49 @@
+
+spring:
+  datasource: #MySQL数据库
+    dynamic:
+      primary: data_master #默认的数据源或者数据源组
+      strict: true #严格匹配数据源,默认false. true未匹配到指定数据源时抛异常,false使用默认数据源
+      datasource:
+        data_master: # 数据
+          url: jdbc:mysql://rm-2zem47a616kksah6g.mysql.rds.aliyuncs.com:3306/data_center?useUnicode=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai&useSSL=false
+          username: super_dba
+          password: iAfRqzyqPIA7v#z4
+          driver-class-name: com.mysql.cj.jdbc.Driver # 3.2.0开始支持SPI可省略此配置
+        zhuzhan_master: # 主站
+          url: jdbc:mysql://rm-2ze6h90266jpy3c64.mysql.rds.aliyuncs.com:3306/igetcool_app_master_2?useUnicode=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai&useSSL=false
+          username: super_dba
+          password: iAfRqzyqPIA7v#z4
+          driver-class-name: com.mysql.jdbc.Driver
+  data:
+    mongodb: #Mongo数据库
+      uri: mongodb://igetcool_app_dev2:7xg9YtZY7tm0H7HC@10.30.130.105:27017/igetcool_app_dev2?readPreference=secondaryPreferred
+      database: igetcool_app_dev2
+#      host:
+#      port:
+#      username:
+#      password:
+#      authenticationDatabase:
+#      gridFsDatabase:
+#      replicaSetName:
+#      fieldNamingStrategy:
+#      autoIndexCreation:
+
+
+
+# Mybatis Plus
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    auto-mapping-behavior: full
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath*:mapper/**/*Mapper.xml
+  global-config:
+    # 逻辑删除配置
+    db-config:
+      # 删除前
+      logic-not-delete-value: 1
+      # 删除后
+      logic-delete-value: 0
+
+

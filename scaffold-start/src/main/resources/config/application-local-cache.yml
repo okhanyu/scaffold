@@ -1,0 +1,20 @@
+# Redis
+i:
+  redis:
+    database: 0
+    enable: true
+    host: 10.30.130.156
+    #password: 1klGtMGobFWqGACo
+    password: 123456
+    port: 6379
+    timeout: 5000
+    lettuce:
+      pool:
+        maxActive: 20
+        maxIdle: 20
+        maxTotal: 20
+        maxWait: 20
+        minIdle: 20
+        timeout: 5000
+    redisson:
+      host: redis://10.30.130.156:6379
