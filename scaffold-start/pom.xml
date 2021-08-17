@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>net.ninini.scaffold</groupId>
-    <artifactId>start</artifactId>
+    <artifactId>scaffold-start</artifactId>
 
     <dependencies>
         <dependency>
